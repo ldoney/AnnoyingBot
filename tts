@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#The FILL part is just because it has a slight delay
+#Also, this needs pico2wave
+pico2wave -w=/tmp/test.wav "FILL $1"
+
+#Plays the sound it made
+aplay /tmp/test.wav
+
+#Deletes said sound
+rm /tmp/test.wav
+
